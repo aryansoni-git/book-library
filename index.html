@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/library-logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Libr&aacute;ry <img src="./images/library-icon.svg" alt="!"></h1>
+    </header>
+    <main>
+        <button id="add-book">&aacute;dd book </button>
+        <div id="container">
+
+        </div>
+    </main>
+    <dialog>
+        <form>
+            <div>
+                <h2>Add new Book</h2>
+                <p id="error-msg"></p>
+            </div>
+            <input type="text" name="title" placeholder="Title" id="title" required maxlength="100">
+            <input type="text" name="author" placeholder="Author" id="author" required maxlength="100">
+            <input type="number" name="pages" placehold er="Pages" id="pages" placeholder="Pages" required>
+            <div>
+                <p>Have you read it ?</p>
+                <input type="checkbox" id="checkbox" checked>
+            </div>
+            <button type="submit" id="submit" formmethod="dialog">Submit</button>
+        </form>
+    </dialog>
+
+    <footer>
+        Copyright
+        <script>document.write(new Date().getFullYear())</script>
+        &copy; aryansoni
+        <a href="https://github.com/aryansoni-git" target="_blank">
+            <img src="./images/github-original.svg" alt="aryansoni-git">
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

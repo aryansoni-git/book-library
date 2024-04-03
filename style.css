@@ -1,0 +1,310 @@
+/* FONT COLLECTION */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* RESET STYLE */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+/* VARIABLES */
+:root {
+    --primary-green: #4CAF50;
+    --secondary-green: #45a049;
+    --primary-white: #fff;
+    --secondary-white: #f5f5f5;
+    --secondary-white-light: #f5f5f5;
+    --primary-black: #333;
+    --secondary-black: #444;
+    --primary-orange: #ff4500;
+    --secondary-orange: #f74200;
+    --button-grey: #e1e1e1;
+}
+
+/* DEFAULT BUTTON STYLE*/
+button {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* BODY */
+body {
+    background-color: var(--secondary-white);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* HEADER */
+header {
+    background-color: var(--primary-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px 0px;
+    box-shadow: 0px 2px 10px 0px #8b8b8b;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+header h1 img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+header h1 img:hover {
+    transform: translate(10px, 0px) rotate(20deg) scale(1.2);
+    transform-origin: bottom left;
+}
+
+/* MAIN */
+main {
+    flex: 1;
+    text-align: center;
+}
+
+/* Add Book Button */
+#add-book {
+    background-color: var(--button-grey);
+    color: var(--primary-black);
+    font-size: 1.4rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#add-book:hover {
+    background-color: var(--primary-green);
+    color: var(--primary-white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Container */
+#container {
+    display: grid;
+    gap: 50px;
+    padding: 20px;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* BOOK CARD */
+.book {
+    background-color: var(--primary-white);
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px 5px 5px 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0.8px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.book:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 600;
+}
+
+span,
+p {
+    font-weight: 400;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* STATUS TOGGLE CONTAINER */
+.status-toggle {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+/* TOGGLE STATUS */
+.toggle {
+    height: 25px;
+    width: 25px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.toggle:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+/* REMOVE BOOK BUTTON */
+.remove-book {
+    color: var(--primary-white);
+    background-color: var(--primary-orange);
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.remove-book:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* DIALOG MODAL */
+dialog {
+    background-color: var(--secondary-white-light);
+    padding: 40px;
+    margin: auto;
+    max-width: 600px;
+    border-radius: 15px;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out, slideIn 0.5s ease-out;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+}
+
+/* Form Heading */
+form h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Error Message */
+form div:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+form div:first-child p {
+    color: #f74200;
+}
+
+/*Input Fields*/
+input[type="text"],
+input[type="number"] {
+    color: var(--secondary-black);
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: var(--primary-green);
+    outline: none;
+}
+
+/* Checkbox*/
+form div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+div input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+/* Form Submit Button */
+form button[type="submit"] {
+    background-color: var(--primary-green);
+    color: var(--primary-white);
+    padding: 18px 35px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--secondary-green);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-white);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px 0px;
+    width: 100%;
+    gap: 6px;
+}
+
+footer a,
+footer a img {
+    height: 22px;
+    width: 22px;
+    transition: transform 0.5s ease-in-out;
+}
+
+footer a img:hover {
+    transform: scale(1.1) rotate(360deg);
+}
