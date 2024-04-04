@@ -2,7 +2,7 @@
 
 ![cover](./images/cover.png)
 
-You can try the Library app live [here]()! 🌐
+You can try the Library app live [here](https://aryansoni-git.github.io/odin-library/)! 🌐
 
 ## Description
 
